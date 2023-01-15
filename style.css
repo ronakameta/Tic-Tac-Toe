@@ -4,9 +4,10 @@ body{
 }
 .full{
     background-color:darkcyan;
+    left: 40%;
     position: absolute;
     top: 15%;
-    left: 40%;
+    margin: auto;
     display: inline;
     border: solid darkcyan;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -66,4 +67,10 @@ h1{
     left: 37%;
     color: white;
     
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
 }
