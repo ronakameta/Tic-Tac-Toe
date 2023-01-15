@@ -1,9 +1,10 @@
 const checker_One = [1,2,3,5,6,7,8,9];
-const checker_Two = [1,2,3,4,5,7,8,9];
+const checker_Two = [11,12,13,14,15,16,17,18];
+let a = 0;
 let player_No = 1;
 function player_Turn(){
     player_No++;
-    console.log(player_No);
+    
 };
 
 function hit1(){
@@ -11,6 +12,8 @@ function hit1(){
     if(player_No%2 === 0){
     document.querySelector(".b1").style.background = "yellow";
     document.querySelector(".turn").textContent = "Player 2"
+    
+
     checker_One[0] = 0;
     }else{
     document.querySelector(".b1").style.background = "red";
@@ -18,6 +21,8 @@ function hit1(){
     checker_Two[0] = 1;
     }
     check();
+    a++;
+    console.log(a);
 };
 function hit2(){
     player_Turn();
@@ -31,6 +36,8 @@ function hit2(){
     checker_Two[1] = 1;
     }
     check();
+    a++;
+    console.log(a);
 };
 function hit3(){
     player_Turn();
@@ -44,6 +51,7 @@ function hit3(){
    checker_Two[2] = 1;
     }
     check();
+    a++;
 };
 function hit4(){
     player_Turn();
@@ -57,6 +65,7 @@ function hit4(){
        checker_Two[3] = 1;
         }
     check();
+    a++;
 };
 function hit5(){
     player_Turn();
@@ -70,6 +79,7 @@ function hit5(){
        checker_Two[4] = 1;
         }
     check();
+    a++;
 };
 function hit6(){
     player_Turn();
@@ -83,6 +93,7 @@ function hit6(){
        checker_Two[5] = 1;
         }
     check();
+    a++;
 };
 function hit7(){
     player_Turn();
@@ -96,6 +107,7 @@ function hit7(){
        checker_Two[6] = 1;
         }
     check();
+    a++;
 };
 function hit8(){
     player_Turn();
@@ -109,6 +121,7 @@ function hit8(){
        checker_Two[7] = 1;
         }
     check();
+    a++;
 };
 function hit9(){
     player_Turn();
@@ -122,6 +135,7 @@ function hit9(){
        checker_Two[8] = 1;
         }
     check();
+    a++;
 };
 document.querySelector(".b1").addEventListener("click", hit1);
 document.querySelector(".b2").addEventListener("click", hit2);
@@ -137,53 +151,86 @@ function check(){
     // for player 1
     if(checker_One[0] == checker_One[1] && checker_One[0] == checker_One[2]) {
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[3] == checker_One[4] && checker_One[3] == checker_One[5]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[6] == checker_One[7] && checker_One[6] == checker_One[8]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[0] == checker_One[3] && checker_One[0] == checker_One[6]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[1] == checker_One[4] && checker_One[1] == checker_One[7]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[2] == checker_One[5] && checker_One[2] == checker_One[8]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
        //diagonal
     if(checker_One[0] == checker_One[4] && checker_One[0] == checker_One[8]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_One[2] == checker_One[4] && checker_One[2] == checker_One[6]){
         document.querySelector(".wonmsg").textContent = "Player 1 Won";
+        document.querySelector(".turn").textContent = null;
        }
     // player Two
     if(checker_Two[0] == checker_Two[1] && checker_Two[0] == checker_Two[2]) {
+        document.querySelector(".wonsmg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[3] == checker_Two[4] && checker_Two[3] == checker_Two[5]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[6] == checker_Two[7] && checker_Two[6] == checker_Two[8]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[0] == checker_Two[3] && checker_Two[0] == checker_Two[6]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[1] == checker_Two[4] && checker_Two[1] == checker_Two[7]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[2] == checker_Two[5] && checker_Two[2] == checker_Two[8]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
        //diagonal
     if(checker_Two[0] == checker_Two[4] && checker_Two[0] == checker_Two[8]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
+        document.querySelector(".turn").textContent = null;
        }
     if(checker_Two[2] == checker_Two[4] && checker_Two[2] == checker_Two[6]){
+        document.querySelector(".wonmsg").classList.add("red");
         document.querySelector(".wonmsg").textContent = "Player 2 Won";
-       }   
+        document.querySelector(".turn").textContent = null;
+       }  
+       // Game Draw
+    if(a===8){
+        document.querySelector(".wonmsg").classList.add("green");
+        document.querySelector(".wonmsg").textContent = "Game Draw";
+        document.querySelector(".turn").textContent = null;
+        console.log("Draw");
+    }
+    
     };
+    
